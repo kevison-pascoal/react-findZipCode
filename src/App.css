@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+* {
+  font-size: 100%;
+}
+body {
+  background-color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  /*background: linear-gradient(#121212, #212B46);*/
+  background: linear-gradient(#121212, #8b0000CC);
 }
 
-.App-link {
-  color: #61dafb;
-}
+.title {
+  font-size: 4rem;
+  color: #FEFEFE;
+  animation: flipTitle 2s;
+} 
 
-@keyframes App-logo-spin {
+@keyframes flipTitle{
   from {
-    transform: rotate(0deg);
+    transform: rotateX(90deg);
+    opacity: 0.6;
   }
   to {
-    transform: rotate(360deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.containerInput {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1.2rem 2rem;
+  margin: 1.4rem 0rem 0.8rem 0rem;
+  display: flex;
+  border-radius: 5px;
+  box-shadow: 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.containerInput input {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FEFEFE;
+  outline: none;
+  margin-right: 0.5rem;
+}
+.containerInput input::placeholder {
+  color: #F1F1F1;
+}
+
+p {
+  font-size: 1.2rem;
+  color: #DD0000;
+  margin-bottom: 2rem;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #FEFEFE;
+  width: 500px;
+  border-radius: 5px;
+}
+.main h2{
+  margin: 1rem 0;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.main span {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-weight: 400;
+}
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  .main h2 {
+    font-size: 1.8rem;
+  }
+  .main {
+    width: 80%;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 410px ) {
+  * {
+    font-size: 70%;
+  }
+}
+@media (max-width: 320px ) {
+  * {
+    font-size: 60%;
   }
 }
