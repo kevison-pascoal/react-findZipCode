@@ -12,7 +12,7 @@ body {
   align-items: center;
   flex-direction: column;
   /*background: linear-gradient(#121212, #212B46);*/
-  background: linear-gradient(#121212, #8b0000CC);
+  background: linear-gradient(#121212, #212B4F);
 }
 
 .title {
@@ -86,7 +86,6 @@ p {
   .title {
     font-size: 3rem;
   }
-
   .main h2 {
     font-size: 1.8rem;
   }
